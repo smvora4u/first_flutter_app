@@ -1,3 +1,5 @@
+import 'package:first_app/gradient_container.dart';
+import 'package:first_app/text_node.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,43 +25,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const TextNode(null, 'Welcome to Flutter', null, null),
         ),
-        body: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(12),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 1, 77, 40),
-                Color.fromARGB(255, 154, 233, 195),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Flutter - The Complete Guide',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Learn Flutter step-by-step, from the ground up.',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-        ),
+        body: const GradientContainer()
       ),
     );
   }
