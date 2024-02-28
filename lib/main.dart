@@ -28,6 +28,16 @@ class MyApp extends StatelessWidget {
         body: Container(
           width: double.infinity,
           padding: const EdgeInsets.all(12),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 1, 77, 40),
+                Color.fromARGB(255, 154, 233, 195),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,12 +48,14 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 16),
               Text(
                 'Learn Flutter step-by-step, from the ground up.',
                 textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white),
               ),
             ],
           ),
