@@ -1,4 +1,3 @@
-import 'package:first_app/text_node.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -22,13 +21,16 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TextNode(24, 'Flutter - The Compoete Guide', FontWeight.bold, Colors.white),
-          SizedBox(height: 16),
-          TextNode(null, 'Learn Flutter step-by-step, from the ground up.', null, Colors.white),
+          Image.asset('assets/images/dice-1.png'),
+          const SizedBox(height: 28),
+          TextButton(
+            onPressed: () {},
+            child: const Text('Roll Dice'),
+          ),
         ],
       ),
     );
