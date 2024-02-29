@@ -2,17 +2,21 @@ import 'package:first_app/text_node.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.startColor, this.endColor, {super.key});
+
+  final Color startColor;
+  final Color endColor;
+
   @override
   Widget build(context) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 1, 77, 40),
-            Color.fromARGB(255, 16, 106, 62),
+            startColor,
+            endColor,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

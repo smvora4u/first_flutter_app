@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const TextNode(null, 'Welcome to Flutter', null, null),
         ),
-        body: const GradientContainer()
+        body: const GradientContainer(Color.fromARGB(255, 2, 85, 45), Color.fromARGB(255, 11, 104, 59))
       ),
     );
   }
